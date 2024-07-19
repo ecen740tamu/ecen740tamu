@@ -1,0 +1,32 @@
+
+title: ECEN 740
+author: 
+  name: 
+  email: santosh@tamu.edu
+
+collections:
+  navigation:
+    output: true
+
+
+include:
+  - docs
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-latex
+header_pages:
+  - home.md
+
+markdown: kramdown
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
+
+ 

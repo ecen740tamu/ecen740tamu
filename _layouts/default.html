@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ 'assets/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ 'assets/page.css' | relative_url }}" > <!-- css for page layout -->
+    <link rel="stylesheet" href="{{ 'assets/code.css' | relative_url }}">
+    <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+      MathJax.Hub.Config({
+        "HTML-CSS": {
+          availableFonts: ["TeX"],
+        },
+        tex2jax: {
+          inlineMath: [['$','$'],["\\(","\\)"],['\[','\]']],},
+          displayMath: [ ['$','$'], ['\\[','\\]'], ['\[','\]']],
+        TeX: {
+          extensions: ["AMSmath.js", "AMSsymbols.js", "color.js"],
+          equationNumbers: {
+            autoNumber: "AMS"
+          }
+        },
+        showProcessingMessages: false,
+        messageStyle: "none",
+        imageFont: null,
+        "AssistiveMML": { disabled: true }
+      });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <body>
+    <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      backgroundColor: '#fff',
+      innerHTML: 'Top',
+      textColor: '#333'
+    })</script>
+    <style>
+      #back-to-top {
+      
+        text-align: center;
+        line-height: 30px;
+        height: 30px;
+      }
+    </style>
+   
+      {% include header.html %}
+      
+      {% include footer.html %}
+    
+    <main class="container">
+      <div class="wrapper-class">
+      {{ content }}
+      </div>
+    </main>
+  </body>
+</html>
